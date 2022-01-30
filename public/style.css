@@ -1,9 +1,75 @@
 * {
     font-family: Arial, Helvetica, sans-serif;
-    background-color: aquamarine;
 }
 
-.standard-image {
+body {
+    background-color: red;
+}
+
+img {
+    position: absolute;
     width: 400px;
     height: 400px;
+
+    top: 50%;
+    left: 50%;
+    transform: translate( -50%, -50% );
 }
+
+.LORGE {
+    width: 90%;
+    height: 90%;
+}
+
+.rotating-image {
+    animation-name: rotate-and-move;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: linear;
+}
+
+.dvd-style-animation {
+    animation-name: horizontal-movement, vertical-movement;
+    animation-duration: 10s, 10s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: linear;
+}
+
+.rainbow-background {
+    animation-name: vomit-colors;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+@keyframes rotate{
+    0% { transform: rotate( 0deg ); }
+    25% { transform: rotate( 90deg ); }
+    50% { transform: rotate( 180deg ); }
+    75% { transform: rotate( 270deg ); }
+    100% { transform: rotate( 360deg ); }
+}
+
+@keyframes vomit-colors {
+    0.000% { background-color: red; }
+    14.29% { background-color: orange; }
+    28.57% { background-color: yellow; }
+    48.86% { background-color: green; }
+    57.14% { background-color: blue; }
+    71.43% { background-color: indigo; }
+    85.71% { background-color: violet; }
+    100.0% { background-color: red; }
+}
+
+@keyframes horizontal-movement {
+    from { left: 0%; }
+    to { left: 100%; }
+}
+
+@keyframes vertical-movement {
+    from { top: 0%; }
+    to { top: 100%; }
+}
+
